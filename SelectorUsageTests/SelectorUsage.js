@@ -14,7 +14,7 @@
   WebDriver.getElement(By.id())
 */
 
-/*describe('Selecting element by ID on http://toolsqa.com//automation-practice-switch-windows', function (){
+describe('Selecting element by ID on http://toolsqa.com//automation-practice-switch-windows', function (){
 	it('Tests that we can select an element by ID by using # as the keyword for id', function () {
 	   
 		browser.url("http://toolsqa.com/automation-practice-switch-windows/");
@@ -22,7 +22,6 @@
 		browser.click("#button1");
 	});
 });
-*/
 
 /*
   In this test we will see how we can select an element by CSS path.
@@ -31,7 +30,6 @@
   Note: WebDriverIO has default search stratedgy set to CSS Path
 */
 
-/*
 describe('Selecting element by CSS path on http://toolsqa.com//automation-practice-switch-windows', function (){
 	it('Tests that we can select an element by CSS by simply specifying the CSS path', function () {
 	   
@@ -39,7 +37,7 @@ describe('Selecting element by CSS path on http://toolsqa.com//automation-practi
 		browser.click("#content > p:nth-child(5) > button");
 	});
 });
-*/
+
 
 /*
   In this test we will see how we can select an element by Link text.
@@ -48,13 +46,14 @@ describe('Selecting element by CSS path on http://toolsqa.com//automation-practi
   This is application to only Link elements
   Note: Pay attention to the usage of '=' to specify that the text following it is link text
 */
-/*describe('Selecting element by Link text on http://toolsqa.com/automation-practice-form/', function (){
+
+describe('Selecting element by Link text on http://toolsqa.com/automation-practice-form/', function (){
 	it('Tests that we can select an element by specifying the link text', function () {
 		browser.url("http://toolsqa.com/automation-practice-form/");
 		//= specifies that the text following is the complete visible text of a link element
 		browser.click("=Link Test");
 	});
-});*/
+});
 
 /*
   In this test we will see how we can select an element by Partial Link text.
