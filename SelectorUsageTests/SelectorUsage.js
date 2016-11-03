@@ -75,7 +75,7 @@
 
 /*
   This is locator technique is unique to WebDriverIO and is not available in WebDriver Java bindings.
-  You can identify elements using some text of the element. Just make sure that the text is unique to
+  You can identify elements using visible text of the element. Just make sure that the text is unique to
   that element. Something like this
 */
 
@@ -94,8 +94,41 @@
 			
 		});	
 	});
+	
+/*
+  This is locator technique is unique to WebDriverIO and is not available in WebDriver Java bindings.
+  You can identify elements using visible partial text of the element. Just make sure that the text is unique to
+  that element. Something like this
+*/
 
+	describe("Selecting element by the partial text available on the element", function () {
+		it("Tests that we can select an element by using text value associated with the element", function (){
+			browser.url("http://toolsqa.com/automation-practice-switch-windows/");
+			var textOfElement = browser.getText("a*=Find me");
+			console.log("Text on the element is " + textOfElement);			
+			/*
+				Note: If you pay attention to the output of this test you will see that it contains
+				this find stratedgy  {"using":"xpath","value":"//a[contains(., \"Find me\")]"}
+				which means that finding element by some text is actually converted to findByXpath and contains function
+				is used.				
+			*/
+			
+		});	
+	});
+	
+/*
+  Finding element with respect to a reference element is a technique where you will want to start from a given element to find
+  an element. This locator technique is referred to as chain selectors. Here is a sample 
 
+*/
+
+	describe("Selecting element using the chain selector stratedgy", function (){
+		it("Correct element is identified using chain selector", function () {
+			
+			browser.url("http://toolsqa.com/automation-practice-form/");
+			browser.element("#content > form > fieldset > div:nth-child(19)").click("#tool-2");
+		});
+	});
 
 
 
